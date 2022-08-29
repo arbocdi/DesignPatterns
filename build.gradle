@@ -1,0 +1,60 @@
+plugins {
+    id 'java-library'
+}
+def lombokVersion = '1.18.12'
+
+group = 'arbocdi'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+	
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor(
+            "org.projectlombok:lombok:${lombokVersion}")
+    testAnnotationProcessor(
+            "org.projectlombok:lombok:${lombokVersion}")
+}
+
+compileJava {
+    options.annotationProcessorPath = configurations.annotationProcessor
+}
+
+
+javadoc {
+    options.charSet = 'UTF-8'
+    options.encoding = 'UTF-8'
+    options.docEncoding = 'UTF-8'
+    options.addStringOption('Xdoclint:none', '-quiet')
+}
+
+test {
+    testLogging.showStandardStreams = true
+}
+apply plugin: 'idea'
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+task copyDependencies(type: Copy) {
+    from configurations.default
+    into 'dependencies'
+}
+wrapper {
+    gradleVersion = '7.1'
+}
