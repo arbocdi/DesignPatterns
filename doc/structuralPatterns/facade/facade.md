@@ -10,4 +10,5 @@
   + Компоненты остаются доступными клиенту,если он в них нуждается.
     
 ![facadeUml](facadeUml.png)
+
 [facadeExample](../../../src/main/java/arbocdi/dp/structural/facade/OrderFacade.java)
