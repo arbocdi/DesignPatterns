@@ -110,19 +110,26 @@ class DeliveryClubOrderVerifier{
     }
 }
 ```  
+
 ```java
-class Eclipse{
-    setX()
-    setY()
+class Rectangle {
+    setX();
+    setY();
+    int area();
 }
-class Circle extends Eclipse{
-//а у круга только радиус, нельзя дать превратить круг в эллипс
-//и нельзя нарушить LSP
-    setY(int y){
+
+class Square extends Rectangle {
+    setY(int y) {
         super.setY(y);
         setX(y);
     }
+    setX(int x){
+        super.setX(x);
+        setY(x);
+    }
 }
+//Но даже так - если есть тесты для площади прямоугольника, они не сработают при таком наследовании
+//и LSP будет нарушен => нельзя наследовать квадрат от прямоугольника! 
 ```
 * <span style="color:blue">Interface Segregation (разделение) Principle</span> - клиент (подкласс в данном случае) не должен
 реализовывать методы, которые ему не нужны.
