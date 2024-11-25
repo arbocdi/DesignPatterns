@@ -17,15 +17,22 @@ class Square implements Shape {
 }
 ```
 ### Polymorphism
-* Классы-наследники могут изменять реализацию методов базового класса и можно спокойно подменять реализации суперклассов (method overriding).
+* Классы-наследники могут изменять реализацию методов базового класса и на этапе компиляции не известно, метод какого класса вызывается(method overriding),
+ т.н. dynamic polymorphism method is known at runtime only.
 ```java
-doSomeWithSpae(Shape shape){//Square,Circle etc...
+class Square implements Shape {
+  @Override  
+  int area(){
+    return x*x;
+  }
+}
+doSomeWithShape(Shape shape){//Square,Circle etc...
   ...
   shape.area();
   ...
 } 
 ```
-* Но можно и создавать методы с другими параметрами (method overloading).
+* Но можно и создавать методы с другими параметрами (method overloading), т.н. static polymorphism method is know at compile time.
 ```java
 class Square implements Shape {
   int area(){
