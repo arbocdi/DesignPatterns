@@ -1,3 +1,52 @@
+# OOP Principles (AIPE)
+### Abstraction
+Объекты (и их классы) в языке программирования отражают не абсолютно все свойства объектов реального мира, а лишь нужные для решения задачи.
+```java
+interface Shape{
+    int area();
+  //real object has material,weight,thickness etc, but were interested only in area;
+}
+```
+### Inheritance
+Классы-наследники как правило нужны для более детального описания объекта.
+```java
+class Square implements Shape {
+    int area(){
+        return x*x;
+    }
+}
+```
+### Polymorphism
+* Буквально означает, что можно спокойно подменять реализации суперклассов (method overriding).
+```java
+doSomeWithSpae(Shape shape){//Square,Circle etc...
+  ...
+  shape.area();
+  ...
+} 
+```
+* Но можно и создавать методы с другими параметрами (method overloading).
+```java
+class Square implements Shape {
+  int area(){
+    return x*x;
+  }
+  int area(int x);
+  int area(int x,int precision);
+}
+```
+
+### Encapsulation
+Класс может иметь внутреннее состояние, не доступное для непосредственного изменения.
+```java
+class SumOperation{
+    private int result;
+    void perform(int arg1,int arg2){
+        result = ag1+arg2;
+    }
+    int getResult();
+}
+```
 # Software Design Principles (PCD)
 * Самое затратное в разработке ПО его последующая модификация,
    принципы проектирования (Design Principles) в том числе призваны сократить расходны на последующую модификацию кода.
