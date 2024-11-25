@@ -17,8 +17,8 @@ class Square implements Shape {
 }
 ```
 ### Polymorphism
-* Классы-наследники могут изменять реализацию методов базового класса и на этапе компиляции не известно, метод какого класса вызывается(method overriding),
- т.н. dynamic polymorphism method is known at runtime only.
+* Poly=many, morph=form. Same interface can have many forms (ex. Shape.area() can have many implementations).
+* Классы-наследники могут изменять реализацию методов базового класса и на этапе компиляции не известно, метод какого класса вызывается(method overriding), т.н. dynamic polymorphism method is known at runtime only.
 ```java
 class Square implements Shape {
   @Override  
