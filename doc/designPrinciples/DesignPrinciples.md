@@ -17,7 +17,7 @@ class Square implements Shape {
 }
 ```
 ### Polymorphism
-* Буквально означает, что можно спокойно подменять реализации суперклассов (method overriding).
+* Классы-наследники могут изменять реализацию методов базового класса и можно спокойно подменять реализации суперклассов (method overriding).
 ```java
 doSomeWithSpae(Shape shape){//Square,Circle etc...
   ...
