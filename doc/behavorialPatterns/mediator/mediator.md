@@ -11,7 +11,7 @@
 
 * Минусы:
   + Логика медиатора может стать довольно сложной.
-* П: чат, кафка
+* П: чат, кафка (кафка может быть как медиатором так и передаточной частью шаблона observer)
 + Vs Facade:
     - Facade aggregates the functionality of separate classes (entire subsystems sometimes) and provides that functionality in a single interface.
     - Mediator: Same as Facade, except that it combines the functionality of all of the aggregate classes to produce new functionality.
