@@ -20,16 +20,16 @@
 * <span style="color:blue">Factory Method</span> - наиболее строгая реализация
   + <span style="color:red">Для каждого типа Product создается свой Creator</span>
   
-  ![abstractCreator.png](abstractCreator.png)
+  ![FactoryMethod](abstractCreator.png)
 
-  [AbstractCreator example](../../../src/main/java/arbocdi/dp/creational/factoryMethod/AbstractCreator.java)
+  [FactoryMethod example](../../../src/main/java/arbocdi/dp/creational/factoryMethod/AbstractCreator.java)
 
-# Simple Factory - класс-фабрика создает вариации Product одного супертипа, выбор конкретного типа определяется передаваемыми параметрами.
+* Simple Factory - класс-фабрика создает вариации Product одного супертипа, выбор конкретного типа определяется передаваемыми параметрами.
   + <span style="color:red">Метод создания надо дорабатывать для новых подклассов Product</span>
   + <span style="color:green">Клиент может создавать объекты не зная конкретный тип Product</span>
   
   ![ConcreteCreator.png](concreteCreator.png)
   
-  [ConcreteCreator example](../../../src/main/java/arbocdi/dp/creational/factoryMethod/ConcreteCreator.java)
+  [SimpleFactory example](../../../src/main/java/arbocdi/dp/creational/factoryMethod/ConcreteCreator.java)
 
-# Factory - это общее понятие, это программная конструкция (метод или класс), создающая экземпляры.
+* Factory - это общее понятие, это программная конструкция (метод или класс), создающая экземпляры.
