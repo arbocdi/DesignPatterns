@@ -1,6 +1,6 @@
 package arbocdi.dp.creational.factoryMethod;
 
-public class AbstractCreator {
+public class FactoryMethod {
     public static abstract class ShapeDrawer {
         protected abstract Shape factoryMethod();
         public void drawShape(){

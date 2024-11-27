@@ -22,7 +22,7 @@
   
   ![FactoryMethod](abstractCreator.png)
 
-  [FactoryMethod example](../../../src/main/java/arbocdi/dp/creational/factoryMethod/AbstractCreator.java)
+  [FactoryMethod example](../../../src/main/java/arbocdi/dp/creational/factoryMethod/FactoryMethod.java)
 
 * Simple Factory - класс-фабрика создает вариации Product одного супертипа, выбор конкретного типа определяется передаваемыми параметрами.
   + <span style="color:red">Метод создания надо дорабатывать для новых подклассов Product</span>
