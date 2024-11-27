@@ -22,3 +22,5 @@
 * П: Разные реализации интерфейса бина в спринг (например разные хранилища данных).
 
 ![uml](uml.png)    
+
+[Operation Example](../../../src/main/java/arbocdi/dp/behavorial/strategy)
