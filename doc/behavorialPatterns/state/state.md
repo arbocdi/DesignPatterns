@@ -26,5 +26,7 @@
   + State - собственно состояние.
     
   ![stateDiagram](stateDiagram.png)
+  ![transitions](transitions.png)
+  ![example](example.png)
 
 [Door Example](../../../src/main/java/arbocdi/dp/behavorial/state/DoorState.java)
